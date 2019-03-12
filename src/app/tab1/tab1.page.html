@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Dashboard
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <div class="dashboard-main-container animated bounceInDown">
+          <h3>D<span class="thin">esh</span> <b>A</b>tom</h3>
+          <div class="avatar-conatainer">
+            <span class="badge">10Xp</span>
+            <i class="badge-notify"></i>
+            <img class="animated zoomIn" src="/src/assets/img/profile.jpg" alt="img">
+          </div>
+
+        </div>
+
+        <div class="list social-list">
+            <a class="item item-thumbnail-left item-text-wrap">
+              <img class="animated zoomIn" src="/src/assets/img/icons/youtube.svg" alt="img">
+              <h2  ng-style="{'color': item.color}">{{item.title}}
+                <span class="notify pull-right animated rubberBand" ng-style="{'background': item.color}">5</span>
+              </h2>
+              <p class="animated fadeIn"></p>
+            </a>
+          </div>
+          
+        <div class="card chart-card">
+            <div class="item item-text-wrap">
+              <canvas id="line" class="chart chart-line" data="lineData" labels="lineLabels" legend="true" series="lineSeries" options="{showTooltips: false}"></canvas>
+            </div>
+            <div class="item item-text-wrap">
+              <canvas id="doughnut" data="pieData" labels="pieLabels" class="chart chart-doughnut" legend="true" series="series" options="{showTooltips: false}">
+              </canvas>
+            </div>
+          </div>
+        
+     
+  </ion-content>
+  
