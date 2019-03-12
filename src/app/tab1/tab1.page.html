@@ -8,11 +8,11 @@
   
   <ion-content padding>
       <div class="dashboard-main-container animated bounceInDown">
-          <h3>D<span class="thin">esh</span> <b>A</b>tom</h3>
+          <h3>{{data.name}}</h3>
           <div class="avatar-conatainer">
             <span class="badge">10Xp</span>
             <i class="badge-notify"></i>
-            <img class="animated zoomIn" src="/src/assets/img/profile.jpg" alt="img">
+            <img class="animated zoomIn" src="https://www.hashnative.com/{{data.photo}}" alt="img">
           </div>
 
         </div>
@@ -20,7 +20,7 @@
         <div class="list social-list">
             <a class="item item-thumbnail-left item-text-wrap">
               <img class="animated zoomIn" src="/src/assets/img/icons/youtube.svg" alt="img">
-              <h2  ng-style="{'color': item.color}">{{item.title}}
+              <h2  ng-style="{'color': item.color}">{{data.designation}}
                 <span class="notify pull-right animated rubberBand" ng-style="{'background': item.color}">5</span>
               </h2>
               <p class="animated fadeIn"></p>

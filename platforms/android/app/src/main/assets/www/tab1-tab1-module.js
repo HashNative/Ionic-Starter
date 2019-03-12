@@ -52,7 +52,7 @@ var Tab1PageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Dashboard\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card class=\"welcome-card\">\n      <ion-img src=\"/assets/shapes.svg\"></ion-img>\n      <ion-card-header>\n        <ion-card-subtitle>Get Started</ion-card-subtitle>\n        <ion-card-title>Welcome to Ionic</ion-card-title>\n      </ion-card-header>\n      <ion-card-content>\n        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>\n      </ion-card-content>\n    </ion-card>\n    <ion-list lines=\"none\">\n      <ion-list-header>\n        <ion-label>Resources</ion-label>\n      </ion-list-header>\n      <ion-item href=\"https://ionicframework.com/docs/\">\n        <ion-icon slot=\"start\" color=\"medium\" name=\"book\"></ion-icon>\n        <ion-label>Ionic Documentation</ion-label>\n      </ion-item>\n      <ion-item href=\"https://ionicframework.com/docs/building/scaffolding\">\n        <ion-icon slot=\"start\" color=\"medium\" name=\"build\"></ion-icon>\n        <ion-label>Scaffold Out Your App</ion-label>\n      </ion-item>\n      <ion-item href=\"https://ionicframework.com/docs/layout/structure\">\n        <ion-icon slot=\"start\" color=\"medium\" name=\"grid\"></ion-icon>\n        <ion-label>Change Your App Layout</ion-label>\n      </ion-item>\n      <ion-item href=\"https://ionicframework.com/docs/theming/basics\">\n        <ion-icon slot=\"start\" color=\"medium\" name=\"color-fill\"></ion-icon>\n        <ion-label>Theme Your App</ion-label>\n      </ion-item>\n    </ion-list>\n</ion-content>\n"
+module.exports = "<ion-header>\n    <ion-toolbar>\n      <ion-title>\n        Dashboard\n      </ion-title>\n    </ion-toolbar>\n  </ion-header>\n  \n  <ion-content padding>\n      <div class=\"dashboard-main-container animated bounceInDown\">\n          <h3>D<span class=\"thin\">esh</span> <b>A</b>tom</h3>\n          <div class=\"avatar-conatainer\">\n            <span class=\"badge\">10Xp</span>\n            <i class=\"badge-notify\"></i>\n            <img class=\"animated zoomIn\" src=\"/src/assets/img/profile.jpg\" alt=\"img\">\n          </div>\n\n        </div>\n\n        <div class=\"list social-list\">\n            <a class=\"item item-thumbnail-left item-text-wrap\">\n              <img class=\"animated zoomIn\" src=\"/src/assets/img/icons/youtube.svg\" alt=\"img\">\n              <h2  ng-style=\"{'color': item.color}\">{{item.title}}\n                <span class=\"notify pull-right animated rubberBand\" ng-style=\"{'background': item.color}\">5</span>\n              </h2>\n              <p class=\"animated fadeIn\"></p>\n            </a>\n          </div>\n          \n        <div class=\"card chart-card\">\n            <div class=\"item item-text-wrap\">\n              <canvas id=\"line\" class=\"chart chart-line\" data=\"lineData\" labels=\"lineLabels\" legend=\"true\" series=\"lineSeries\" options=\"{showTooltips: false}\"></canvas>\n            </div>\n            <div class=\"item item-text-wrap\">\n              <canvas id=\"doughnut\" data=\"pieData\" labels=\"pieLabels\" class=\"chart chart-doughnut\" legend=\"true\" series=\"series\" options=\"{showTooltips: false}\">\n              </canvas>\n            </div>\n          </div>\n        \n     \n  </ion-content>\n  "
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Dashboar
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".welcome-card ion-img {\n  max-height: 35vh;\n  overflow: hidden; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2lsaGFtL0Rlc2t0b3AvaW9uaWMvU3RhcnRlci9zcmMvYXBwL3RhYjEvdGFiMS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC90YWIxL3RhYjEucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndlbGNvbWUtY2FyZCBpb24taW1nIHtcbiAgbWF4LWhlaWdodDogMzV2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cbiJdfQ== */"
+module.exports = ".welcome-card ion-img {\n  max-height: 35vh;\n  overflow: hidden; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2lsaGFtL0Rlc2t0b3AvaW9uaWMvU3RhcnRlci9zcmMvYXBwL3RhYjEvdGFiMS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC90YWIxL3RhYjEucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndlbGNvbWUtY2FyZCBpb24taW1nIHtcbiAgbWF4LWhlaWdodDogMzV2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuIl19 */"
 
 /***/ }),
 
@@ -83,6 +83,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var Tab1Page = /** @class */ (function () {
     function Tab1Page() {
+        this.slideOpts = {
+            effect: 'flip'
+        };
     }
     Tab1Page = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

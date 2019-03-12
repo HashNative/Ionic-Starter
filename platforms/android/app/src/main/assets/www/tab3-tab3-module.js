@@ -52,7 +52,7 @@ var Tab3PageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Chats\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content></ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Chats\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"list social-list\">\n      <a class=\"item item-thumbnail-left item-text-wrap\">\n        <img class=\"animated zoomIn\" src=\"{{item.img}}\" alt=\"img\">\n        <h2  ng-style=\"{'color': item.color}\">{{item.title}}\n          <span class=\"notify pull-right animated rubberBand\" ng-style=\"{'background': item.color}\">5</span>\n        </h2>\n        <p class=\"animated fadeIn\"></p>\n      </a>\n    </div>\n  </ion-content>"
 
 /***/ }),
 
